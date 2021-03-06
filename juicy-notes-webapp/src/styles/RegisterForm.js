@@ -8,8 +8,7 @@ export const RegisterWrapper = styled.div`
     padding-top: 72px;
     padding-bottom: 72px;
     align-items: center;
-    background-color: #ffec9d;
-    border-radius: 10px;
+    background-color: #eaeaea;
 `;
 
 export const InputWrapper = styled.div`
@@ -33,12 +32,12 @@ export const RegisterFormWrapper = styled.form`
     }
 
     & > input[type=submit] {
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
     
     & > input[type=button] {
-        margin-top: 30px;
+        margin-top: 10px;
     }
 
 `;

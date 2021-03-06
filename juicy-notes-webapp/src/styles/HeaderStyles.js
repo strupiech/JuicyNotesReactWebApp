@@ -3,7 +3,7 @@ import styled from 'styled-components/macro';
 export const HeaderWrapper = styled.div`
     width: 100%;
     height: 60px;
-    background-color: #ffec9d;
+    background-color: #eaeaea;
     display: flex;
     align-items: center;
     padding: 30px;

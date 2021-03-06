@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/macro';
 
 export const FullContainer = styled.div`
     width: 100%;
@@ -39,7 +39,6 @@ export const Video = styled.div`
     background-size: cover;
     width: 654px;
     height: 410px;
-    border-radius: 10px;
     background-position: -110px;
     /* border: 7px solid #ffec9d; */
 `;
