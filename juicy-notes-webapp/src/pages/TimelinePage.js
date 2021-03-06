@@ -1,37 +1,35 @@
 import React from 'react';
-import { ContentWrapper, TitleWrapper, Title, Face, Reverse, CollectionFlashcard, Bin, Juice, CollectionWrapper } from '../styles/TimelineStyles';
-import LiniaGora from '../images/artoards1-01.png';
-import LiniaDwa from '../images/artoards1-02.png';
-import LiniaTrzy from '../images/artoards1-03.png';
-import LiniaCztery from '../images/artoards1-04.png';
-import Kubek from '../images/kubek.png'
+import { ContentWrapper, CollectionWrapper, CollectionItem, CollectionPin } from '../styles/TimelineStyles';
+
+let array = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+let colors = ["f48473", "d55b55", "db7667", "aa5c50", "f59081"]
+
+function renderTimeLine() {
+
+    let counter = 1;
+
+    let result = array.map(value => {
+
+        // var randomColor = Math.floor(Math.random() * (16777215 - 100 + 1)).toString(16);
+        var randomColor = colors[Math.floor(Math.random() * 5)];
+
+        return <>
+            <CollectionPin direction={counter % 2 === 0 ? "left" : "right"} background={'#' + randomColor}>{value}</CollectionPin>
+            <CollectionItem direction={counter % 2 === 0 ? "left" : "right"} borderColor={'#' + randomColor} background="#eaeaea" columnStart={counter % 2 === 0 ? "3" : "1"} rowStart={counter} rowEnd={counter++ + 2}>
+                {value}
+            </CollectionItem>
+        </>
+    }
+    );
+
+    return result;
+}
 
 function TimelinePage() {
     return (
         <ContentWrapper>
-            <TitleWrapper>
-                <Title>OŚ CZASU</Title>
-            </TitleWrapper>
             <CollectionWrapper>
-                <CollectionFlashcard>
-                    <Bin src={Kubek}></Bin>
-                </CollectionFlashcard>
-                <CollectionFlashcard>
-                    <Face>Zestaw 1</Face>
-                    <Juice src={LiniaGora} />
-                </CollectionFlashcard>
-                <CollectionFlashcard>
-                    <Juice src={LiniaDwa} />
-                    <Reverse>Zestaw 2</Reverse>
-                </CollectionFlashcard>
-                <CollectionFlashcard>
-                    <Face>Zestaw 3</Face>
-                    <Juice src={LiniaTrzy} />
-                </CollectionFlashcard>
-                <CollectionFlashcard>
-                    <Juice src={LiniaCztery} />
-                    <Reverse>Zestaw 4</Reverse>
-                </CollectionFlashcard>
+                {renderTimeLine()}
             </CollectionWrapper>
         </ContentWrapper>
     );
