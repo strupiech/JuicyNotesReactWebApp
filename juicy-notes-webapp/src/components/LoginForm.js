@@ -56,8 +56,8 @@ function LoginForm(props) {
                     {errors.password && errors.password.type === "required" && <Span>Hasło jest wymagane</Span>}
                 </InputWrapper>
 
-                <Input width="235px" height="44px" bgColor="#22635e" fontSize="1em" type="submit" value="Zaloguj się"></Input>
-                <Input width="150px" height="30px" bgColor="#f48473" type="button" value="Zarejestruj" onClick={() => handleClickLogin()}></Input>
+                <Input width="300px" height="44px" bgColor="#419bf9" fontSize="1em" type="submit" value="Zaloguj się"></Input>
+                <Input width="300px" height="44px" bgColor="#f48473" fontSize="1em" type="button" value="Zarejestruj" onClick={() => handleClickLogin()}></Input>
 
             </RegisterFormWrapper>
         </RegisterWrapper>
